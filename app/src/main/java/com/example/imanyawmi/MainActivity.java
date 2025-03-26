@@ -37,11 +37,12 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        // Other buttons remain the same...
-        // Daily Challenge button
+        // Daily Challenge button - NOW NAVIGATES TO CHALLENGE ACTIVITY
         LinearLayout layoutDailyChallenge = findViewById(R.id.layoutDailyChallenge);
         layoutDailyChallenge.setOnClickListener(v -> {
-            // Handle daily challenge button click
+            // Navigate to ChallengeActivity
+            Intent intent = new Intent(MainActivity.this, ChallengeActivity.class);
+            startActivity(intent);
         });
 
         // Notepad button

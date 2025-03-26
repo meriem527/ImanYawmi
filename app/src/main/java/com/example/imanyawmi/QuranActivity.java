@@ -1,6 +1,7 @@
 package com.example.imanyawmi;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
@@ -9,6 +10,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.core.content.ContextCompat;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,6 +51,9 @@ public class QuranActivity extends AppCompatActivity {
         btnContinueReading = findViewById(R.id.btnContinueReading);
         btnHome = findViewById(R.id.btnHome);
         btnMoreOptions = findViewById(R.id.btnMoreOptions);
+
+        // Set initial tab state
+        selectTab(tabSurahs);
     }
 
     private void setupSurahsList() {
@@ -56,7 +61,15 @@ public class QuranActivity extends AppCompatActivity {
         surahs = new ArrayList<>();
         surahs.add("Al-Fatihah");
         surahs.add("Al-Baqarah");
-        // Add more Surahs...
+        surahs.add("Ali 'Imran");
+        surahs.add("An-Nisa");
+        surahs.add("Al-Ma'idah");
+        surahs.add("Al-An'am");
+        surahs.add("Al-A'raf");
+        surahs.add("Al-Anfal");
+        surahs.add("At-Tawbah");
+        surahs.add("Yunus");
+        // Add more Surahs as needed
 
         adapter = new ArrayAdapter<>(
                 this,
@@ -75,7 +88,7 @@ public class QuranActivity extends AppCompatActivity {
 
     private void setupTabListeners() {
         tabSurahs.setOnClickListener(v -> {
-            // Switch to Surahs list
+            selectTab(tabSurahs);
             adapter = new ArrayAdapter<>(
                     this,
                     android.R.layout.simple_list_item_1,
@@ -85,9 +98,11 @@ public class QuranActivity extends AppCompatActivity {
         });
 
         tabFavorites.setOnClickListener(v -> {
-            // Populate and switch to Favorites list
+            selectTab(tabFavorites);
             favorites = new ArrayList<>();
             favorites.add("Al-Fatihah (Favorite)");
+            favorites.add("Ar-Rahman (Favorite)");
+            favorites.add("Yasin (Favorite)");
 
             adapter = new ArrayAdapter<>(
                     this,
@@ -96,6 +111,19 @@ public class QuranActivity extends AppCompatActivity {
             );
             listSurahs.setAdapter(adapter);
         });
+    }
+
+    private void selectTab(TextView selectedTab) {
+        // Reset both tabs to dark green
+        tabSurahs.setTextColor(ContextCompat.getColor(this, R.color.dark_green));
+        tabFavorites.setTextColor(ContextCompat.getColor(this, R.color.dark_green));
+
+        // Set selected tab to yellow
+        if (selectedTab == tabSurahs) {
+            tabSurahs.setTextColor(ContextCompat.getColor(this, R.color.yellow_text));
+        } else if (selectedTab == tabFavorites) {
+            tabFavorites.setTextColor(ContextCompat.getColor(this, R.color.yellow_text));
+        }
     }
 
     private void setupButtonListeners() {

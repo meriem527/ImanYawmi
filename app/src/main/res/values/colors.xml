@@ -44,5 +44,12 @@
         <color name="teal_accent">#B2E1D7</color>
         <color name="yellow_accent">#FFC107</color>
 
+    <!-- Ramadan Challenge Color Palette -->
+    <color name="ramadan_background">#2E7D6E</color>
+    <color name="ramadan_card_background">#3B978A</color>
+    <color name="ramadan_accent">#FFC107</color>
+    <color name="ramadan_secondary">#1C5D4A</color>
+    <color name="ramadan_text">#E0E0E0</color>
+
 
 </resources>

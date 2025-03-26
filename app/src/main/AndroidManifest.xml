@@ -21,6 +21,10 @@
         <activity
             android:name=".QuranActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+
+        <activity
+            android:name=".ChallengeActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

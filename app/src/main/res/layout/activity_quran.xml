@@ -6,46 +6,58 @@
     android:background="@color/background_green"
     android:orientation="vertical">
 
-    <!-- Top Green Container with Title and Menu -->
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/background_green"
-        android:padding="16dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Quran"
-            android:textColor="@color/white"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-        <ImageButton
-            android:id="@+id/btnMoreOptions"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:src="@drawable/ic_more_options"
-            android:contentDescription="More Options" />
-
-    </FrameLayout>
-
-    <!-- White Container with Rounded Corners -->
+    <!-- Elegant Header -->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        app:cardCornerRadius="44dp"
-        app:cardBackgroundColor="@color/white">
+        app:cardCornerRadius="24dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="@color/dark_green">
 
-        <!-- Navigation Tabs -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:padding="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Quran"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"/>
+
+            <ImageButton
+                android:id="@+id/btnMoreOptions"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_gravity="end|center_vertical"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_more_options"
+                android:contentDescription="More Options"
+                android:padding="12dp"
+                android:scaleType="centerInside"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Navigation Tabs with Elegant Design -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="32dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/tabSurahs"
@@ -54,8 +66,9 @@
                 android:layout_weight="1"
                 android:text="Surahs"
                 android:textAlignment="center"
+                android:textColor="@color/dark_green"
                 android:textStyle="bold"
-                android:textColor="@color/dark_green" />
+                android:padding="16dp"/>
 
             <TextView
                 android:id="@+id/tabFavorites"
@@ -64,26 +77,28 @@
                 android:layout_weight="1"
                 android:text="Favorites"
                 android:textAlignment="center"
-                android:textColor="@color/dark_green" />
+                android:textColor="@color/dark_green"
+                android:padding="16dp"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-    <!-- Khatem Quran and Continue Buttons -->
+    <!-- Action Buttons with Equal Size -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingHorizontal="16dp"
-        android:paddingVertical="8dp">
+        android:paddingHorizontal="32dp"
+        android:paddingVertical="16dp">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/btnKhatemQuran"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginEnd="8dp"
-            app:cardBackgroundColor="@color/dark_green"
-            app:cardCornerRadius="16dp">
+            android:layout_marginEnd="16dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@color/dark_green">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -96,14 +111,17 @@
                     android:layout_height="wrap_content"
                     android:text="Khatem Quran"
                     android:textColor="@color/white"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Start New Reading"
                     android:textColor="@color/yellow_text"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:layout_marginTop="8dp"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -112,9 +130,10 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginStart="8dp"
-            app:cardBackgroundColor="@color/dark_green"
-            app:cardCornerRadius="16dp">
+            android:layout_marginStart="16dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@color/dark_green">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -127,39 +146,58 @@
                     android:layout_height="wrap_content"
                     android:text="Continue"
                     android:textColor="@color/white"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Where I Last Stopped"
                     android:textColor="@color/yellow_text"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:layout_marginTop="8dp"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </LinearLayout>
 
     <!-- Surahs List -->
-    <ListView
-        android:id="@+id/listSurahs"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:padding="16dp" />
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="32dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="@color/white">
+
+        <ListView
+            android:id="@+id/listSurahs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="8dp"/>
+    </androidx.cardview.widget.CardView>
 
     <!-- Home Bar -->
-    <RelativeLayout
-        android:layout_width="match_parent"
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="8dp">
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="32dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="@color/dark_green">
 
         <ImageButton
             android:id="@+id/btnHome"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_centerInParent="true"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_home"
-            android:contentDescription="Home" />
-    </RelativeLayout>
+            android:contentDescription="Home"
+            android:padding="16dp"/>
+    </androidx.cardview.widget.CardView>
 </LinearLayout>
