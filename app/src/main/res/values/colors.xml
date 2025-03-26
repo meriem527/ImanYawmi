@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base colors -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Design 1: Green Theme -->
+    <color name="background_green">#4c8479</color>
+    <color name="dark_green">#2b5f56</color>
+    <color name="calendar_background">#1E5545</color>
+    <color name="hadith_background">#a9c7c3</color>
+    <color name="hadith_border">#4c8479</color>
+    <color name="yellow_text">#ffbd59</color>
+
+    <!-- Design 2: Blue/Purple Theme -->
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- Calendar colors -->
+    <color name="calendar_day">#FFFFFF</color>
+    <color name="calendar_weekend">#FF0000</color> <!-- Red for Sunday/weekend days -->
+    <color name="important_day_background">#4CAF50</color>
+    <color name="selected_day_background">#2196F3</color>
+    <color name="current_day_background">#FF5722</color>
+    <color name="hijri_day_text">#673AB7</color>
+
+    <!-- Todo List colors -->
+    <color name="todo_header">#1E5545</color> <!-- Green theme - Use @color/colorPrimary for blue theme -->
+    <color name="todo_text">#333333</color>
+
+    <!-- Button colors -->
+    <color name="button_modify_bg">#1E5545</color> <!-- Use @color/colorPrimary for blue theme -->
+    <color name="button_add_bg">#1E5545</color> <!-- Same as modify in your design -->
+
+
+
+        <color name="teal_background">#3CB5A0</color>
+        <color name="teal_button">#2E9487</color>
+        <color name="teal_text">#2E9487</color>
+        <color name="teal_accent">#B2E1D7</color>
+        <color name="yellow_accent">#FFC107</color>
+
+
+</resources>
