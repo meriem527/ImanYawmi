@@ -78,7 +78,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardHadith"
         android:layout_width="0dp"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         android:layout_marginTop="8dp"
@@ -91,17 +91,62 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- Type of Content (Hadith/Dua/Quran) -->
+            <TextView
+                android:id="@+id/tvHadithType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HADITH"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <!-- Content of Hadith/Dua/Quran -->
+            <TextView
+                android:id="@+id/tvHadithContent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Loading daily content..."
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintTop_toBottomOf="@id/tvHadithType"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <!-- Reference -->
+            <TextView
+                android:id="@+id/tvHadithReference"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reference"
+                android:textColor="@color/yellow_text"
+                android:textSize="12sp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/tvHadithContent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+    <!--
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="4dp">
 
-            <!-- Border effect for the hadith card -->
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/hadith_border_background"/>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>    -->
+
 
     <!-- Bottom Menu -->
     <androidx.cardview.widget.CardView
